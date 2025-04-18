@@ -39,4 +39,5 @@ RUN ./install.sh docker && \
 EXPOSE 8080
 
 CMD ["python3", "webserver/main.py"]
+RUN python3 create_admin_user.py || true
 
